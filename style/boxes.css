@@ -1,0 +1,275 @@
+/* I don't use LESS because of LazynESS ;)
+light-gray: #E0E0E0;
+blue: #00CCFF; - web-safe version of RGB(0, 189, 215)
+dark-gray: #545454;
+black: #484848;
+*/
+*{
+	font-family: sans-serif !important;
+}
+img{
+	width: 100%;
+	height: auto;
+}
+.tooltip, .tooltip-inverse{
+	box-sizing: content-box;
+	width: 315px;
+	height: 202px;
+	display: inline-block !important;
+}
+/*I found this triangle code in the internet.*/
+.tooltip__triangle-up {
+	position: relative;
+    top: -83px;
+    left: 20px;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent; 
+	border-right: 10px solid transparent; 
+	border-bottom: 10px solid white;
+}
+/*Strange way to make it work. According to logic the 
+"border-right" or rotated "border-left" should do the same, but it doesn't. */
+
+/*Remember, ceramic keyboard!!!!!*/
+.tooltip-inverse__triangle-right{
+	position: relative;
+	width: 30px;
+    height: 30px;
+    right: -315px;
+    top: 20px;
+    background-image: url('../img/arr-right.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*I don't like how work code below. You can uncomment it and see in action.*/
+/*.tooltip__triangle-right {
+	width: 0; 
+	height: 0; 
+	border-top: 100px solid red; 
+	border-left: 100px solid transparent;
+	-ms-transform: rotate(90deg); /* IE 9 */
+    /* -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    /* -o-transform: rotate(90deg); /* Opera */
+    /* -moz-transform: rotate(90deg); /* FF */
+    /* /* transform: rotate(90deg);*/
+}
+/*.tooltip__triangle-right {
+	position: relative;
+    top: -40px;
+    left: 320px;
+	width: 10; 
+	height: 0; 
+	border-left: 10px solid red; 
+	border-bottom: 10px solid transparent; 
+	border-top: 10px solid transparent;
+}*/
+
+
+.wrapper{
+  position: relative;
+}
+.content{
+	background-color: #E0E0E0 !important;
+	padding: 0px;
+	margin: 0px;
+}
+
+.tooltip{
+	position: relative;
+	top: 0px;
+	left: 25px;
+	background-color: white;
+}
+.tooltip-inverse{
+	position: relative;
+	top: 30px;
+	left: 50px;
+	background-color: #545454;
+}
+/*.tooltip__buttons{
+	color: black;
+}
+.tooltip:last-child > input[type=button]{
+	background-color: #545454;
+}*/
+.tooltip__user-img, .tooltip-inverse__user-img,
+.tooltip__user-data, .tooltip-inverse__user-data{
+	position: relative;
+	display: inline-block;
+}
+.tooltip__user-data, .tooltip-inverse__user-data{
+	line-height: 1.5; 
+	/*I've got the same line in reet-default. In case, you will ue this 1 as module.*/
+}
+.tooltip__user-img{	
+	position: relative;
+	top: 20px;
+	left: 7px;
+}
+.tooltip-inverse__user-img{
+	top: -10px;
+	left: 25px;
+}
+.tooltip__user-data{
+	position: relative;
+	top: 20px;
+	left: 30px;
+	color: #484848;
+}
+.tooltip-inverse__user-data{
+	position: relative;
+	top: -15px;
+	left: 50px;
+	color: #E1E1E1;
+}
+
+.tooltip__user-data h3, .tooltip-inverse__user-data h3{
+	font-weight: bold;
+	font-size: 1.3rem;
+}
+.tooltip-inverse__user-data h3{
+	color: white;
+}
+.tooltip__user-data p{
+	color: #484848;	
+}
+.tooltip-inverse__user-data p{
+	color: #E0E0E0;
+}
+
+.tooltip__buttons{
+	top: 50px;
+	background-color: rgb(249, 249, 249);
+}
+.tooltip-inverse__buttons{
+	top: 20px;
+	background-color: #484848;	
+}
+.tooltip__buttons > input:last-child{
+	color: black !important;
+}
+.tooltip-inverse__buttons, .tooltip__buttons{
+	position: relative;
+	box-sizing: content-box;
+	height: 80px;
+	width: 315px;
+	clear: both;
+}
+.tooltip__buttons>input[type=button],
+.tooltip-inverse__buttons>input[type=button]{
+	position: relative;
+	top: 20px;
+	left: 25px;
+	background-color: #E0E0E0;
+	color: white;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 4px;
+
+	-ms-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+
+	width: 120px;
+	height: 45px;
+	font-size: 1rem;
+	vertical-align: center;
+}
+
+.tooltip__buttons>input[type=button]:hover{
+	background-color: #545454; /*Dark gray.*/
+	color: #00CCFF;
+}
+.tooltip-inverse__buttons>input[type=button]{
+	background-color: #545454; /*Dark gray.*/ 
+	color: #E0E0E0; /*Light gray.*/
+}
+.tooltip-inverse__buttons>input[type=button]:hover{
+	background-color: #fff; 
+	color: #545454; /*Dark gray.*/
+}
+.tooltip-inverse__buttons>input[value=message]:hover{
+	background-color: #E0E0E0; /*Light gray.*/
+	color: #00CCFF;
+}
+
+
+.tooltip__buttons>input[value=message],
+.tooltip-inverse__buttons>input[value=message]{
+	background-color: #00CCFF;
+	margin-right: 15px;
+}
+
+/*Remember, ceramic keyboard!!!!!*/
+@media only screen and (max-width: 339px){
+	body{
+		min-width: 340px;
+	}
+	.content{
+	  width: 340px;
+	  height: 500px;
+	  padding: 0px;
+	  position: relative;
+	  top: 50px;
+	  left: 0%;
+      margin: 0 auto;
+	  background-color: #E0E0E0;
+	}
+	.tooltip{
+		display: block;		
+		position: relative;
+		top: 30px;
+		left: 5px;
+	}
+	.tooltip-inverse{
+		position: relative;
+		top: 60px;
+		left: 5px;
+	}
+}
+@media only screen and (min-width: 340px) and (max-width: 739px) {
+	.content{
+	  width: 340px;
+	  height: 500px;
+	  padding: 0px;
+	  position: relative;
+	  top: 50px;
+	  left: 0%;
+      margin: 0 auto;
+	  background-color: #E0E0E0;
+	}
+	.tooltip{
+		display: block;		
+		position: relative;
+		top: 30px;
+		left: 5px;
+	}
+	.tooltip-inverse{
+		position: relative;
+		top: 60px;
+		left: 5px;
+	}
+}
+@media only screen and (min-width: 740px)  {
+	.content{
+	  width: 740px;
+	  height: 300px;
+	  padding: 0px;
+	  position: relative;
+	  top: 50px;
+	  left: 0%;
+      margin: 0 auto;
+	  background-color: #E0E0E0;
+	}
+	.tooltip, .tooltip-inverse{
+		display: inline-block;
+		top: 20px;
+	}
+	.tooltip-inverse{
+		top: 50px;
+	}
+}
+/*Remember, ceramic keyboard!!!!!*/
+

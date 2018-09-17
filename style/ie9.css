@@ -1,0 +1,11 @@
+@media only screen and (min-width: 740px){
+	.tooltip{
+	    top: 40px !important;
+    }
+    .tooltip-inverse{
+	    top: 50px !important;
+    }
+    .wrapper{
+    	background-color: yellow;
+    }
+}

@@ -1,0 +1,42 @@
+@media only screen and (min-width: 340px) and (max-width: 739px) {
+	.content{
+	  width: 340px;
+	  height: 500px;
+	  padding: 0px;
+	  position: relative;
+	  top: 50px;
+	  left: 0%;
+      margin: 0 auto;
+	  background-color: #E0E0E0;
+	}
+	.tooltip{
+		display: block;		
+		position: relative;
+		top: 30px;
+		left: 5px;
+	}
+	.tooltip-inverse{
+		position: relative;
+		top: 60px;
+		left: 5px;
+	}
+}
+@media only screen and (min-width: 740px)  {
+	.content{
+	  width: 740px;
+	  height: 300px;
+	  padding: 0px;
+	  position: relative;
+	  top: 50px;
+	  left: 0%;
+      margin: 0 auto;
+	  background-color: #E0E0E0;
+	}
+	.tooltip, .tooltip-inverse{
+		display: inline-block;
+		top: 20px;
+	}
+	.tooltip-inverse{
+		top: 50px;
+	}
+}
